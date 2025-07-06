@@ -13,7 +13,7 @@ const {
   cancelBooking,
   getInvoice,
 } = require("../controller/flightController");
-const { verifyToken } = require("../middleware/authMiddleware");
+const { verifyToken } = require("../middleware/authmiddleware");
 
 router.get("/flights/search", verifyToken, searchFlights);
 router.post("/flights/price", verifyToken, priceFlight);
