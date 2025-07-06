@@ -156,7 +156,7 @@ const Masterdata = () => {
 
     const fetchTravelers = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/user/travelers", {
+        const response = await axios.get("https://vendor-f6gw.onrender.com/api/user/travelers", {
           headers: {
             Authorization: `Bearer ${sessionId}`,
           },
@@ -191,7 +191,7 @@ const Masterdata = () => {
 
     if (window.confirm("Are you sure you want to delete this traveller?")) {
       try {
-        const response = await axios.delete(`http://localhost:3000/api/user/travelers/${id}`, {
+        const response = await axios.delete(`https://vendor-f6gw.onrender.com/api/user/travelers/${id}`, {
           headers: {
             Authorization: `Bearer ${sessionId}`,
           },

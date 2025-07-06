@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://vendor-f6gw.onrender.com/api";
 
 // Helper function to get the token from localStorage
 const getToken = () => {

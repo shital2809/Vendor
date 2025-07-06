@@ -48,7 +48,7 @@ const BookingResponse = () => {
       try {
         const sessionToken = localStorage.getItem("sessionToken");
         if (!sessionToken) throw new Error("No session token found");
-        const response = await fetch("http://localhost:3000/api/travelers", {
+        const response = await fetch("https://vendor-f6gw.onrender.com/api/travelers", {
           headers: { Authorization: `Bearer ${sessionToken}` },
         });
         if (!response.ok) throw new Error("Failed to fetch master travelers");

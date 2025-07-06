@@ -15,7 +15,7 @@ export const CountryProvider = ({ children }) => {
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/countries");
+        const response = await fetch("https://vendor-f6gw.onrender.com/api/countries");
         const data = await response.json();
         if (data.status === "success") {
           setCountries(data.countries);

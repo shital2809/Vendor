@@ -102,7 +102,7 @@ const MyProfile = () => {
       }
 
       try {
-        const url = "http://localhost:5000/api/user/travelers";
+        const url = "https://vendor-f6gw.onrender.com/api/user/travelers";
         const response = await fetch(url, {
           method: "GET",
           headers: {
@@ -225,7 +225,7 @@ const MyProfile = () => {
       return;
     }
 
-    const url = "http://localhost:5000/api/user/travelers";
+    const url = "https://vendor-f6gw.onrender.com/api/user/travelers";
 
     try {
       console.log("Sending request to:", url);
@@ -288,7 +288,7 @@ const MyProfile = () => {
       return;
     }
 
-    const url = `http://localhost:5000/api/user/travelers/${editingProfileId}`;
+    const url = `hhttps://vendor-f6gw.onrender.com/api/user/travelers/${editingProfileId}`;
 
     try {
       console.log("Sending update request to:", url);
@@ -374,7 +374,7 @@ const MyProfile = () => {
     }
 
     try {
-      const url = `http://localhost:5000/api/user/travelers/${profileId}`;
+      const url = `https://vendor-f6gw.onrender.com/api/user/travelers/${profileId}`;
       console.log(`Attempting to delete profile ID: ${profileId}`);
       const response = await fetch(url, {
         method: "DELETE",

@@ -1743,7 +1743,7 @@ export default function Navbar({ onLoginSuccess }) {
       const selectedCountryData = countries.find(country => country.name === selectedCountry.name);
       if (!selectedCountryData) return;
 
-      const response = await fetch(`http://localhost:5000/api/${selectedCountry.name}/currency`, {
+      const response = await fetch(`https://vendor-f6gw.onrender.com/api/${selectedCountry.name}/currency`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

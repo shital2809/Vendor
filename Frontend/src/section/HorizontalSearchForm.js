@@ -380,7 +380,7 @@ const HorizontalSearchForm = ({ initialData = {}, onSearch }) => {
           return;
         }
 
-        const response = await fetch(`http://localhost:5000/api/flights/live-airport-search?term=${query}`, {
+        const response = await fetch(`https://vendor-f6gw.onrender.com/api/flights/live-airport-search?term=${query}`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -489,7 +489,7 @@ const HorizontalSearchForm = ({ initialData = {}, onSearch }) => {
       const destinationUpper = destination.toUpperCase();
 
       const response = await fetch(
-        `http://localhost:5000/api/flights/search?origin=${origin}&destination=${destinationUpper}&date=${departureDate}${
+        `https://vendor-f6gw.onrender.com/api/flights/search?origin=${origin}&destination=${destinationUpper}&date=${departureDate}${
           returnDate ? `&returnDate=${returnDate}` : ""
         }`,
         {

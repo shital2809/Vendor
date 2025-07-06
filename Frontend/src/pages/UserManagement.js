@@ -1375,7 +1375,7 @@ const UserManagement = () => {
           return;
         }
 
-        const response = await axios.get("http://localhost:5000/api/vendor/subvendors", {
+        const response = await axios.get("https://vendor-f6gw.onrender.com/api/vendor/subvendors", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -1394,7 +1394,7 @@ const UserManagement = () => {
           return;
         }
 
-        const response = await axios.get("http://localhost:5000/api/vendor/permissions", {
+        const response = await axios.get("https://vendor-f6gw.onrender.com/api/vendor/permissions", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -1418,7 +1418,7 @@ const UserManagement = () => {
   const fetchSubvendorPermissions = async (subvendorId) => {
     try {
       const token = localStorage.getItem("vendor_token");
-      const response = await axios.get(`http://localhost:5000/api/vendor/subvendors/${subvendorId}/permissions`, {
+      const response = await axios.get(`https://vendor-f6gw.onrender.com/api/vendor/subvendors/${subvendorId}/permissions`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -1475,7 +1475,7 @@ const UserManagement = () => {
       if (editingSubvendor) {
         // Update subvendor
         const response = await axios.put(
-          `http://localhost:5000/api/vendor/subvendors/${editingSubvendor.id}`,
+          `https://vendor-f6gw.onrender.com/api/vendor/subvendors/${editingSubvendor.id}`,
           formData,
           {
             headers: {
@@ -1491,7 +1491,7 @@ const UserManagement = () => {
       } else {
         // Create subvendor
         const response = await axios.post(
-          "http://localhost:5000/api/vendor/subvendors",
+          "https://vendor-f6gw.onrender.com/api/vendor/subvendors",
           formData,
           {
             headers: {
@@ -1516,7 +1516,7 @@ const UserManagement = () => {
 
         if (permissionsToAssign.length > 0) {
           await axios.post(
-            "http://localhost:5000/api/vendor/permissions/assign",
+            "https://vendor-f6gw.onrender.com/api/vendor/permissions/assign",
             {
               subvendor_id: subvendorId,
               permissions: permissionsToAssign,
@@ -1563,7 +1563,7 @@ const UserManagement = () => {
 
     try {
       const token = localStorage.getItem("vendor_token");
-      await axios.delete(`http://localhost:5000/api/vendor/subvendors/${subvendorId}`, {
+      await axios.delete(`https://vendor-f6gw.onrender.com/api/vendor/subvendors/${subvendorId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -1619,7 +1619,7 @@ const UserManagement = () => {
       }
 
       await axios.post(
-        "http://localhost:5000/api/vendor/permissions/assign",
+        "https://vendor-f6gw.onrender.com/api/vendor/permissions/assign",
         {
           subvendor_id: parseInt(selectedSubvendor),
           permissions: permissionsToAssign,
