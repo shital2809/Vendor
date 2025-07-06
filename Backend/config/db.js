@@ -13,6 +13,9 @@ const pool = new Pool({
   password: String(process.env.DB_PASSWORD || ''),
   database: process.env.DB_NAME || 'auth_db',
   port: parseInt(process.env.DB_PORT, 10) || 5432,
+  ssl: {
+    rejectUnauthorized: false, // Set to true if you want to enforce SSL
+  },
 });
 
 pool.on('error', (err) => {
